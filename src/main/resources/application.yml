@@ -1,0 +1,22 @@
+server:
+  port: 8989
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/recommend
+    url: jdbc:mysql://localhost:3306/ems_tag?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath*:com/sn/mapper/*.xml
+  type-aliases-package: com.sn.entity
